@@ -1,19 +1,25 @@
 {
-    "name": "andres/tema6",
+    "name": "david/tema6",
     "description": "programación por capas",
     "type": "project",
     "require": {
-        "altorouter/altorouter": "^2.0"
+        "altorouter/altorouter": "^2.0",
+        "philo/laravel-blade": "^3.1"
     },
     "autoload": {
         "psr-4": {
-            "Andres\\Tema6\\": "src/"
+            "David\\Tema6\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Andrés Crespo",
-            "email": "acrerosj@canariaseducacion.es"
+            "name": "David Álvarez",
+            "email": "davidalvper@gmail.com"
         }
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
 }
