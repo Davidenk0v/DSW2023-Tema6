@@ -14,14 +14,15 @@ class ClientController
   public function index()
   {
     global $blade;
-    echo $blade->view()->make('client.index', ['name' => 'Pepe'])->render();
+    $vip = true;
+    $clients = ['David', 'Pepe', 'Agustin'];
+    echo $blade->view()->make('client.index', compact('clients', 'vip'))->render();
   }
 
   public function show($params)
   {
-    $id = $params['id'];
-    echo "<p>Mostrando el cliente con el id: $id</p>";
-    $url = $this->router->generate('car_client_show', ['id' => $id]);
+    $name = $params['name'];
+    $url = $this->router->generate('car_client_show', ['name' => $name]);
     echo "<p><a href=\"$url\">Muestra los coches del usuario</a></p>";
   }
 }
